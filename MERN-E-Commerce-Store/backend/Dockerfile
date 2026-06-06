@@ -2,10 +2,10 @@ FROM node:18-alpine
 
 WORKDIR /app
 
-COPY MERN-E-Commerce-Store/package*.json ./
+COPY package*.json ./
 RUN npm install
 
-COPY MERN-E-Commerce-Store/backend ./
+COPY . .
 
 EXPOSE 5000
 
