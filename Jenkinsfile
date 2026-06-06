@@ -2,15 +2,16 @@ pipeline {
     agent any
 
     environment {
-        BACKEND_IMAGE = "yourdockerhub/backend"
-        FRONTEND_IMAGE = "yourdockerhub/frontend"
+        DOCKERHUB_USER = "arshen00r"
+        BACKEND_IMAGE = "arshen00r/backend"
+        FRONTEND_IMAGE = "arshen00r/frontend"
     }
 
     stages {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/arsh-e-noor/week2-assessment-docker'
+                git branch: 'main', url: 'https://github.com/arsh-e-noor/week2-assessment-docker'
             }
         }
 
